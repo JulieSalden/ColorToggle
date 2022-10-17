@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Toggle Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="nav-main">
+       <img id="toggleMenu" src="hamburger_menu.png" /> 
+       <ul id="nav-colors">
+         <form action="colorPicker"></form>  
+          <li id="home">
+            <label><input type="radio" id="home" name="chosenColor" value="Home" checked="checked">
+            <p>Click for home color or press '0'</p></label>
+          </li>
+          <li id="color1">
+            <label><input type="radio" id="color1" name="chosenColor" value="Color 1">
+            <p>Click for orange or press '1'</p></label>
+          </li>
+          <li id="color2">
+            <label><input type="radio" id="color2" name="chosenColor" value="Color 2">
+            <p>Click for pink or press '2'</p></label>
+          </li>
+          <li id="color3">
+            <label><input type="radio" id="color3" name="chosenColor" value="Color 3">
+            <p>Click for lightblue or press '3'</p></label>
+          </li>
+          <li id="color4">
+            <label><input type="radio" id="color4" name="chosenColor" value="Color 4">
+            <p>Click for blue or press '4'</p></label>
+          </li>
+          <li id="color5">
+            <label><input type="radio" id="color5" name="chosenColor" value="Color 5">
+            <p>Click for purple or press '5'</p></label>
+          </li>
+        </form>
+        </ul>
+      </div>
+    </nav>
+
+   <p id="colorStatus">Here's the color that you chose</p>
+   
+
+
+<script defer src="script.js"></script>
+  </body>    
