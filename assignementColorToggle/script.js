@@ -29,69 +29,81 @@ let blue = document.querySelector("#color4");
 let purple = document.querySelector("#color5");
 
 homeColor.addEventListener("click", function () {
-  document.body.style.background = "beige";
-  document.getElementById("colorStatus").innerHTML = "You chose beige";
+  ClickBackgroundColor("beige");
+  displayChosenColorClick("You chose beige");
 });
 
 orange.addEventListener("click", function () {
-  document.body.style.background = "rgb(244, 176, 131)";
-  document.getElementById("colorStatus").innerHTML = "You chose orange";
+  ClickBackgroundColor("rgb(244, 176, 131)");
+  displayChosenColorClick("You chose orange");
 });
 
 pink.addEventListener("click", function () {
-  document.body.style.background = "rgb(243, 162, 210)";
-  document.getElementById("colorStatus").innerHTML = "You chose pink";
+  ClickBackgroundColor("rgb(243, 162, 210)");
+  displayChosenColorClick("You chose pink");
 });
 
 lightblue.addEventListener("click", function () {
-  document.body.style.background = "rgb(135, 231, 242)";
-  document.getElementById("colorStatus").innerHTML = "You chose lightblue";
+  ClickBackgroundColor("rgb(135, 231, 242)");
+  displayChosenColorClick("You chose lightblue");
 });
 
 blue.addEventListener("click", function () {
-  document.body.style.background = "rgb(92, 110, 242)";
-  document.getElementById("colorStatus").innerHTML = "You chose blue";
+  ClickBackgroundColor("rgb(92, 110, 242)");
+  displayChosenColorClick("You chose blue");
 });
 
 purple.addEventListener("click", function () {
-  document.body.style.background = "rgb(217, 130, 246)";
-  document.getElementById("colorStatus").innerHTML = "You chose purple";
+  ClickBackgroundColor("rgb(217, 130, 246)");
+  displayChosenColorClick("You chose purple");
 });
+
+function ClickBackgroundColor(color) {
+  document.querySelector("body").style.background = color;
+}
+
+function displayChosenColorClick(display){
+  document.getElementById("colorStatus").innerHTML = display;}
+
 
 window.addEventListener("keydown", function (e) {
   switch (e.keyCode) {
     case 48:
       keyPressBackgroundColor("beige");
-      document.getElementById("colorStatus").innerHTML = "You chose beige";
+      displayChosenColorKey("You chose beige");
       document.getElementById("home").checked = true;
       break;
     case 49:
       keyPressBackgroundColor("rgb(244, 176, 131)");
-      document.getElementById("colorStatus").innerHTML = "You chose orange";
+      displayChosenColorKey("You chose orange");
       document.getElementById("color1").checked = true;
       break;
     case 50:
       keyPressBackgroundColor("rgb(243, 162, 210)");
-      document.getElementById("colorStatus").innerHTML = "You chose pink";
+      displayChosenColorKey("You chose pink");
       document.getElementById("color2").checked = true;
       break;
     case 51:
       keyPressBackgroundColor("rgb(135, 231, 242)");
-      document.getElementById("colorStatus").innerHTML = "You chose lightblue";
+      displayChosenColorKey("You chose lightblue");
       document.getElementById("color3").checked = true;
       break;
     case 52:
       keyPressBackgroundColor("rgb(92, 110, 242)");
-      document.getElementById("colorStatus").innerHTML = "You chose blue";
+      displayChosenColorKey("You chose blue");
       document.getElementById("color4").checked = true;
       break;
     case 53:
       keyPressBackgroundColor("rgb(217, 130, 246)");
-      document.getElementById("colorStatus").innerHTML = "You chose purple";
+      displayChosenColorKey("You chose purple");
       document.getElementById("color5").checked = true;
   }
 });
 
 function keyPressBackgroundColor(color) {
   document.querySelector("body").style.background = color;
+}
+
+function displayChosenColorKey(display){
+  document.getElementById("colorStatus").innerHTML = display;
 }
